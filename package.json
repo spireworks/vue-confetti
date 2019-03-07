@@ -10,7 +10,7 @@
     "pretest": "npm run lint",
     "test": "jest",
     "coverage": "jest --coverage",
-    "dev": "webpack --watch",
+    "dev": "webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack"
   },
   "repository": {
@@ -52,6 +52,7 @@
     "vue-loader": "^15.6.2",
     "vue-template-compiler": "^2.6.4",
     "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
   }
 }
