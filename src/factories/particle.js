@@ -37,7 +37,7 @@ export default (options) => {
   const opts = Object.assign(defaults, options);
 
   // Set a random color from the array
-  const colorIndex = getRandomNumber(0, opts.colors.length, true);
+  const colorIndex = getRandomNumber(0, opts.colors.length - 1, true);
   opts.color = opts.colors[colorIndex];
 
   // Generate a particle of the given shape
