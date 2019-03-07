@@ -28,6 +28,7 @@
         <option value="rect">Rectangle</option>
         <option value="circle">Circle</option>
         <option value="heart">Heart</option>
+        <option value="triangle">Triangle</option>
       </select>
     </div>
 

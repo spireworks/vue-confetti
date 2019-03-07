@@ -3,6 +3,7 @@ import {
   CircleParticle,
   RectParticle,
   HeartParticle,
+  TriangleParticle,
 } from '../particles';
 
 /**
@@ -46,6 +47,8 @@ export default (options) => {
     return new RectParticle(opts);
   } if (opts.shape === 'heart') {
     return new HeartParticle(opts);
+  } if (opts.shape === 'triangle') {
+    return new TriangleParticle(opts);
   }
 
   throw Error(`Unkown particle shape: "${opts.shape}"`);
