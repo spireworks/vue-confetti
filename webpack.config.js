@@ -9,11 +9,11 @@ const isDev = process.env.NODE_ENV !== 'production';
 module.exports = {
   entry: {
     'vue-confetti': [
-      path.resolve(__dirname, 'src', 'index.js')
+      path.resolve(__dirname, 'src', 'index.js'),
     ],
     demo: [
       path.resolve(__dirname, 'demo', 'demo.js'),
-    ]
+    ],
   },
 
   mode: isDev ? 'development' : 'production',
@@ -53,16 +53,19 @@ module.exports = {
 
   plugins: [
     new CleanWebpackPlugin(
-      [ 'dist' ],
+      ['dist'],
       {
         root: __dirname,
-      }
+      },
     ),
 
     new HtmlWebpackPlugin({
       template: require('html-webpack-template'),
       title: 'Vue Confetti Demo',
       appMountId: 'app',
+      meta: {
+        viewport: 'width=device-width, initial-scale=1',
+      },
     }),
 
     new VueLoaderPlugin(),
