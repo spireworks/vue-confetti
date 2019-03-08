@@ -22,7 +22,9 @@ export default class Canvas {
     canvas.style.pointerEvents = 'none';
     canvas.style.top = 0;
     canvas.style.width = '100vw';
-    canvas.style.height = '100vh';
+    canvas.style.height = '100vh'; // `${window.innerHeight}px`; //
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     canvas.id = 'confetti-canvas';
     document.querySelector('body').appendChild(canvas);
     return canvas;

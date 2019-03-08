@@ -73,7 +73,7 @@ export default class BaseParticle {
       this.wind + (this.d + this.x + this.y) * this.windPosCoef,
     ) * this.windSpeedMax;
     this.tilt = (Math.sin(this.tiltAngle - (this.count / 3))) * 15;
-    return this.y > this.canvas.height; // returns true if particle is past bottom
+    return this.y > window.innerHeight; // returns true if particle is past bottom
   }
 
   /**
