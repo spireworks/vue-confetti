@@ -25,6 +25,7 @@ export default class Canvas {
     canvas.style.height = '100vh'; // `${window.innerHeight}px`; //
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    canvas.zIndex = 100000;
     canvas.id = 'confetti-canvas';
     document.querySelector('body').appendChild(canvas);
     return canvas;
